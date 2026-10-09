@@ -1,0 +1,7 @@
+{
+  "name": "Divine – Dhoop Batti & Agarbatti",
+  "description": "Explore Divine Dhoop Batti and Agarbatti, designed to bring beautiful fragrance and a peaceful atmosphere to prayer, meditation, and everyday moments.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

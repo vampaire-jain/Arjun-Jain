@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --color-charcoal-950: #0C0B0A;
+  --color-charcoal-900: #121110;
+  --color-charcoal-800: #1A1816;
+  --color-charcoal-700: #25221F;
+  --color-charcoal-600: #332E29;
+  --color-gold-400: #E2C799;
+  --color-gold-500: #C9A86A;
+  --color-gold-600: #AA8745;
+  --color-cream-100: #FBF8F3;
+  --color-cream-200: #EFEAE2;
+  --color-sand-300: #DCD4C7;
+  --color-sand-400: #B8AC9A;
+  --color-brown-700: #5C4537;
+  --color-brown-800: #3C2B22;
+}
+
+/* Custom subtle incense smoke drift */
+@keyframes smoke-float-1 {
+  0% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translateY(-24px) translateX(12px) scale(1.1);
+    opacity: 0.45;
+  }
+  100% {
+    transform: translateY(-48px) translateX(-6px) scale(1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes smoke-float-2 {
+  0% {
+    transform: translateY(0) translateX(0) scale(0.95);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translateY(-30px) translateX(-14px) scale(1.15);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-60px) translateX(8px) scale(1.25);
+    opacity: 0;
+  }
+}
+
+.animate-smoke-1 {
+  animation: smoke-float-1 8s ease-in-out infinite;
+}
+
+.animate-smoke-2 {
+  animation: smoke-float-2 11s ease-in-out infinite 2s;
+}
+
+/* Gentle glow */
+.gold-glow {
+  box-shadow: 0 0 45px -10px rgba(201, 168, 106, 0.18);
+}
+
+.gold-glow-subtle {
+  box-shadow: 0 0 25px -5px rgba(201, 168, 106, 0.1);
+}
+
+/* Respect user preferences for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-smoke-1,
+  .animate-smoke-2 {
+    animation: none !important;
+  }
+}
